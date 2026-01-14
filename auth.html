@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Al-Wadaq | Authentication</title>
+  <meta name="description" content="Login and register for Al-Wadaq demo website." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="nav">
+    <div class="container">
+      <div class="navbar">
+        <a class="brand" href="index.html" aria-label="Al-Wadaq">
+          <img src="assets/img/logo.svg" alt="Al-Wadaq logo" />
+          <span class="brand-text"><strong>Al-Wadaq</strong><span data-i18n="city">Babel, Iraq</span></span>
+        </a>
+
+        <button id="menuBtn" class="btn menu-btn" type="button">Menu</button>
+
+        <nav id="navLinks" class="links" aria-label="Navigation">
+          <a class="link" data-nav href="index.html" data-i18n="nav_home">Home</a>
+          <a class="link" data-nav href="about.html" data-i18n="nav_about">About</a>
+          <a class="link" data-nav href="products.html" data-i18n="nav_products">Products</a>
+          <a class="link" data-nav href="contact.html" data-i18n="nav_contact">Contact</a>
+          <a class="link active" data-nav href="auth.html" data-i18n="nav_auth">Account</a>
+          <a class="link" data-nav href="visualizer.html" data-i18n="viz_badge">Visualizer</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button id="langBtn" class="btn" type="button">English</button>
+          <div id="sessionSlot"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section">
+      <div class="container grid" style="grid-template-columns:1fr 1fr; align-items:start;">
+        <div class="card">
+          <span class="badge" data-i18n="auth_badge">Account</span>
+          <h1 style="margin:10px 0;" data-i18n="login_title">Login</h1>
+          <form id="loginForm">
+            <div>
+              <label data-i18n="email_label">Email</label>
+              <input id="lEmail" type="email" required />
+            </div>
+            <div>
+              <label data-i18n="password_label">Password</label>
+              <input id="lPassword" type="password" minlength="6" required />
+            </div>
+            <button class="btn primary" type="submit" data-i18n="login_btn">Login</button>
+            <div class="notice" data-i18n="auth_note">
+              Demo authentication: stored locally in your browser (for assignment only).
+            </div>
+          </form>
+        </div>
+
+        <div class="card">
+          <span class="badge" data-i18n="auth_badge">Account</span>
+          <h1 style="margin:10px 0;" data-i18n="register_title">Register</h1>
+          <form id="registerForm">
+            <div>
+              <label data-i18n="name_label">Name</label>
+              <input id="rName" type="text" required />
+            </div>
+            <div>
+              <label data-i18n="email_label">Email</label>
+              <input id="rEmail" type="email" required />
+            </div>
+            <div>
+              <label data-i18n="password_label">Password</label>
+              <input id="rPassword" type="password" minlength="6" required />
+            </div>
+            <button class="btn primary" type="submit" data-i18n="register_btn">Create account</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div>
+          <div class="brand" style="margin-bottom:8px;">
+            <img src="assets/img/logo.svg" alt="Al-Wadaq logo" />
+            <span class="brand-text"><strong>Al-Wadaq</strong><span data-i18n="city">Babel, Iraq</span></span>
+          </div>
+          <div class="small" data-i18n="footer_tagline">Al-Wadaq Wallpaper Manufacturing Co. Ltd — Babel, Iraq</div>
+        </div>
+        <div class="small">© <span id="year"></span> Al-Wadaq — <span data-i18n="footer_rights">All rights reserved</span></div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="assets/js/i18n.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
